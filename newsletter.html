@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Newsletter</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background: #1e40af;
+    font-family: Arial, sans-serif;
+}
+
+/* Main Card */
+.newsletter{
+    width:420px;
+    padding:28px;
+    border-radius:18px;
+
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border:1px solid rgba(148,163,184,0.18);
+
+    box-shadow:0 20px 50px rgba(0,0,0,0.6);
+
+    position:relative;
+    overflow:hidden;
+}
+
+/* Soft tech glow */
+.newsletter::before{
+    content:"";
+    position:absolute;
+    inset:-40%;
+    background: radial-gradient(circle,
+        rgba(59,130,246,0.2),
+        transparent 60%
+    );
+    transform: rotate(25deg);
+}
+
+/* Title */
+.newsletter h2{
+    margin:0 0 8px;
+    color:#ffffff;
+    font-size:20px;
+    position:relative;
+}
+
+/* Subtitle */
+.newsletter p{
+    margin:0 0 18px;
+    color:#94a3b8;
+    font-size:13px;
+    position:relative;
+}
+
+/* Input box */
+.input-box{
+    display:flex;
+    gap:10px;
+    position:relative;
+}
+
+/* Email input */
+.input-box input{
+    flex:1;
+    padding:12px 14px;
+
+    border-radius:10px;
+    border:1px solid rgba(148,163,184,0.25);
+
+    background: rgb(15, 195, 255);
+    color:#190d0d;
+
+    outline:none;
+    transition:0.3s;
+}
+
+/* focus */
+.input-box input:focus{
+    border-color:#3b82f6;
+    box-shadow:0 0 12px rgba(59,130,246,0.25);
+}
+
+/* Button */
+.input-box button{
+    padding:12px 16px;
+
+    border:none;
+    border-radius:10px;
+
+    background: linear-gradient(135deg, #3b82f6, #1e40af);
+    color:#fff;
+
+    font-weight:bold;
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+/* hover */
+.input-box button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="newsletter">
+
+    <h2>Subscribe to Newsletter</h2>
+    <p>Get the latest updates, tips and tech news directly in your inbox.</p>
+
+    <div class="input-box">
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe</button>
+    </div>
+
+</div>
+
+</body>
+</html>
